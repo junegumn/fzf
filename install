@@ -150,8 +150,8 @@ download() {
   url=https://github.com/junegunn/fzf/releases/download/$version/${1}
   set -o pipefail
   if ! (try_curl $url || try_wget $url); then
-    set +o pipefail
-    binary_error="Failed to download with curl and wget"
+    # set +o pipefail
+    # binary_error="Failed to download with curl and wget"
     return
   fi
   set +o pipefail
